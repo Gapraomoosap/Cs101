@@ -14,13 +14,13 @@
 <body>
     <div class="container">
         <div class="row vh-100 align-items-center justify-content-center">
-            <div class="col-sm-8 col-md-6 col-lg-4 bg-white rounded p-4 shadow">
+            <div class="col-sm-8 col-md-6 col-lg-4 bg-white rounded border border-success  p-4 shadow">
                 <div class="row justify-content-center mb-4">
-
+                    <h1 class="heading text-center">Login</h1>
                 </div>
                 <form>
                     <div class="mb-4">
-                        <label for="email" class="form-label">Email address</label>
+                        <label for="email" class="form-label">Email </label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-4">
