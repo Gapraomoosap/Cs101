@@ -1,0 +1,10 @@
+.product-number-con{
+    display: flex
+}
+.product-number{
+    position: absolute;
+    color:rgb(255, 255, 255);
+}
+.h1{
+    color: red;
+}

@@ -1,66 +1,64 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    // char strings[10000], cha_[10000];
-    // int count = 0;
+    // char strings[100], cha_[100];
     // scanf("%s", strings);
-    // for (int i = 0; strings[i] != 0; i++)
+    // for (int i = 0; i < strlen(strings); i++)
     // {
     //     cha_[i] = strings[i];
-    //     count++;
     // }
-    // for (int i = count; i >= 0; i--)
+    // for (int i = strlen(strings) - 1; i >= 0; i--)
     // {
     //     printf("%c", cha_[i]);
     // }
     // return 0;
 
-    // char strings[] = {"abcdefghijklmnopqrstuvwxyz"} ;
-    // char cha_[] ={"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-    // char inp[1000];
-    // scanf("%[^\n]",inp);
+    
+    #include <stdio.h>
+    #include <ctype.h>
+    #include <string.h>
 
-    // for(int i = 0 ; inp[i] != 0 ; i++)
+    
+    char string[100];
+
+    printf("Enter a string in lowercase: ");
+    scanf("%s", string);
+
+    // Convert the string to uppercase
+    for (int i = 0; i < strlen(string); i++) {
+        string[i] = toupper(string[i]);
+    }
+
+    printf("The uppercase string is: %s\n", string);
+
+    return 0;
+    
+
+
+    
+
+    // char *numberindex[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+    // char number[] = {"0123456789"};
+    // char inp[1000];
+    // int flag = 0;
+    // scanf("%s", inp);
+    // for (int i = 0; inp[i] != 0; i++)
     // {
-    //     // printf("%s\n",inp);
-    //     for(int j = 0 ; j<26; j++)
+    //     for (int j = 0; j < 10; j++)
     //     {
-    //         // printf("inp %c check %c\n" ,inp[i],strings[j]);
-    //         if(inp[i] == strings[j])
+    //         flag = 0;
+    //         if (inp[i] == number[j])
     //         {
-    //             printf("%c",cha_[j]);
-    //         }
-    //         else if(inp[i] == ' ')
-    //         {
-    //             printf(" ");
+    //             printf("%s", numberindex[j]);
+    //             flag = 1;
     //             break;
     //         }
-
     //     }
-
+    //     if (flag == 0)
+    //     {
+    //         printf("%c", inp[i]);
+    //     }
     // }
-
-    char *numberindex[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-    char number[] = {"0123456789"};
-    char inp[1000];
-    int flag = 0;
-    scanf("%s", inp);
-    for (int i = 0; inp[i] != 0; i++)
-    {
-        for (int j = 0; j < 10; j++)
-        {
-            flag = 0;
-            if (inp[i] == number[j])
-            {
-                printf("%s", numberindex[j]);
-                flag = 1;
-                break;
-            }
-        }
-        if (flag == 0)
-        {
-            printf("%c", inp[i]);
-        }
-    }
 }
