@@ -1,10 +1,206 @@
-.product-number-con{
-    display: flex
-}
-.product-number{
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 80px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+  }
+  .inner_header{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    
+  }
+  
+  
+  .logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+  
+  }
+  .logo_container h1{
+    color : rgb(0, 94, 55);
+    height : 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .navigation{
+    float: right;
+    height: 100%;
+  
+  }
+  .navigation li{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+  }
+  
+  .navigation li a{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: rgb(0, 108, 38);
+  
+  }
+  .img-container img{
+    width : 100%;
+    height:100%
+  }
+  
+  .home-category{
+    display: block;
+  }
+  .category_container{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 0 4px #d9ede6, 0 0 0 7px #008556;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 2em;
+  }
+  .box h6 {
     position: absolute;
-    color:rgb(255, 255, 255);
-}
-.h1{
-    color: red;
-}
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    padding-bottom: 5px;
+  }
+  .box a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .box2 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: auto;
+    text-align: center;
+    margin-left: 2em;
+  }
+  .box2 h6 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 14px;
+    color: white;
+  }
+  .box2 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .bbox1{
+    background-image: url(https://cdn.1112.com/1112/public/images/Menu/card_Pizza.png);
+  }
+  .bbox2{
+    background-image: url(https://cdn.1112.com/1112/public/images/Menu/card_Appetizers.png);
+  }
+  .bbox3{
+    background-image: url(https://cdn.1112.com/1112/public/images/Menu/card_Chicken.png);
+  }
+  .bbox4{
+    background-image: url(https://cdn.1112.com/1112/public/images/Menu/card_Pasta.png);
+  }
+  .bbox5{
+    background-image: url(https://cdn.1112.com/1112/public/images/Menu/card_Salad.png);
+  }
+  .bbox6{
+    background-image: url(https://cdn.1112.com/1112/public/images/Menu/card_Desserts.png);
+  }
+
+  h6{
+    font-size: 15px;
+  }
+  
+  #bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .product{
+    width: 260px;
+    height: 300px;
+    border: 1px solid rgb(0, 128, 0);
+    border-radius: 10px;
+    color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    
+  } 
+  .product_item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-footer {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 1em;
+  }
+ 
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .product_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+   
+  }
+  
+  .pizza-item-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+  }
