@@ -3,8 +3,8 @@ $(document).ready(function() {
       $('#dropdownMenuButton').text($(this).text());
     });
   });
-  alert(56265);
-  console.log("hello");
+  
+  
 
   // Get the Delivery and Pick Up buttons
   function updateDropdownOptions() {

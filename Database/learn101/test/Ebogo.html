@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EBogo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
@@ -58,25 +59,52 @@
     <h4 style = "text-align: center; padding-top : 1em;">SELECT FIRST PIZZA</h4>
     <div class="pizza-item-container" >
         <div class="row">
-            <div class="col-md-7">
+            <div class="col">
                 <img src="https://cdn.1112.com/1112/public/images/products/pizza/Oct2021/162216_MCT.png" alt="Cheese" style="height: 315px; width: 400px;">
             </div>
-            <div class="col-md-5">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle px-3 rounded-5" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="padding-right: 8rem!important; margin-left: 1em; margin-top: 2em; background-color: white; color: black;">
-                        <i class="fa-solid fa-pizza-slice"></i> Double Cheese
-                    </button>
-                    <ul class="dropdown-menu" style="background-color: white;">
-                        <li><button class="dropdown-item" type="button" style="color: green; font-weight: bold; ">Pizza Com 304 Plaza
-                            Srimahapho</button></li>
-                        <li><button class="dropdown-item" type="button" style="color: green; font-weight: bold;">Pizza Com
-                            Amata</button></li>
-                        <li><button class="dropdown-item" type="button" style="color: green; font-weight: bold;">Pizza Com
-                            Amnatcharoen</button></li>
-                      </ul>
+            <div class="col">
+                
+                <select class="form-select bg- text-success" aria-label="Default select example">
+                    <option value="1">DOUBLE CHEESE</option>
+                    <option value="2">DOUBLE PEPPERONI</option>
+                    <option value="3">SEAFOOD BACON</option>
+                    <option value="4">GRILLED HAWAIIAN</option>
+                </select>
+                <p>Extra Cheese and Pizza Sauce</p>
+                <h3>Price 279 ฿ </h3>
+                <div class="row">
+                    <div class="col">
+                        <h5>Select Size</h5>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                                <label class="btn btn-outline-success " for="success-outlined" style="border-radius: 100%;">M</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                                <label class="btn btn-outline-success" for="danger-outlined" style="border-radius: 100%; display : flex ; justify-content: center; width: 50px; height: 50px; text-align: center; align-items: center;">L</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h5>Select crust</h5>
+                        </div>
+                        <div class="col">
+                            <select class="form-select bg- text-success" aria-label="Default select example">
+                                <option value="1">DOUBLE CHEESE</option>
+                                <option value="2">DOUBLE PEPPERONI</option>
+                                <option value="3">SEAFOOD BACON</option>
+                                <option value="4">GRILLED HAWAIIAN</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
