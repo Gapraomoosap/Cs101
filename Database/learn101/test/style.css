@@ -199,8 +199,47 @@
   }
   
   .pizza-item-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     border: 1px solid green;
+    border-radius: 10px;
+    margin-top: 2em;
+    margin-left: 25em;
+    margin-right: 25em;
+    padding:2em ;
+
   }
+  .button1 {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-left: 5em;
+    padding-right: 5em;
+    font-weight: bold;
+  }
+
+  .button2 {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-left: 5em;
+    padding-right: 5em;
+    font-weight: bold;
+  }
+  #toggle-button-ingredients{
+    background-color: white;
+    border: none;
+  }
+  
+  .plus-btn {
+    float: left;
+  }
+  .minus-btn {
+    float: right;
+  }
+  
