@@ -237,9 +237,18 @@
   }
   
   .plus-btn {
-    float: left;
-  }
-  .minus-btn {
     float: right;
   }
+  .minus-btn {
+    float: left;
+  }
   
+  .order-container{
+    border: 1px solid green;
+    border-radius: 10px;
+    margin-top: 2em;
+    margin-left: 25em;
+    margin-right: 25em;
+    padding:2em ;
+
+  }
