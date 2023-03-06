@@ -28,3 +28,16 @@ function IngredientsButton(){
   }
 
 }
+const paymentButtons = document.querySelectorAll('.payment-option');
+let activeButton;
+
+paymentButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (activeButton) {
+      activeButton.classList.remove('active');
+    }
+    activeButton = button;
+    activeButton.classList.add('active');
+  });
+});
+
