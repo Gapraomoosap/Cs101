@@ -4,6 +4,9 @@
     list-style: none;
     text-decoration: none;
   }
+  a {
+    text-decoration: none !important;
+  }
   .header{
     position: fixed;
     top: 0;
@@ -305,4 +308,27 @@
     margin-right: 10em;
     padding:0.5em ;
   }
-  
+  .footer-bar{
+    background-color: #414142;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  .footer-container{
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .p-2 a{
+    color: #F6F6F6;
+    font-size: 23px;
+  }
+
+  .p-2 img{
+    padding-right: 1em;
+    width: 60px;
+  }
