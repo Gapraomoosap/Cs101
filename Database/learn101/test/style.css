@@ -174,8 +174,20 @@
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    
   } 
+  .product-chicken{
+    width: 260px;
+    height: 320px;
+    border: 1px solid rgb(0, 128, 0);
+    border-radius: 10px;
+    color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
   .product_item {
     margin-bottom: 0.5rem;
   }
