@@ -159,6 +159,9 @@
     width: 100%;
   }
   
+  .item-footer button{
+    border-radius: 10px;
+  }
   .product{
     width: 260px;
     height: 300px;
