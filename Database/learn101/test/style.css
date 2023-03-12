@@ -194,7 +194,7 @@
   
   .item-footer {
     display: flex;
-    flex-direction: column; /* stack items vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -346,4 +346,27 @@
   .p-2 img{
     padding-right: 1em;
     width: 60px;
+  }
+
+  .product-pasta{
+    width: 260px;
+    height: auto;
+    border: 1px solid rgb(0, 128, 0);
+    border-radius: 10px;
+    color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .item-footer-pasta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    
   }
