@@ -361,12 +361,4 @@
     text-align: center;
     box-sizing: border-box;
   }
-  .item-footer-pasta{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    
-    
-  }
+  
