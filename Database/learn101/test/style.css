@@ -360,3 +360,18 @@
   .card-body1 button{ 
     border-radius: 12px;
   }
+  .address_container{
+   
+    margin: 0 auto;
+    width: 45%;
+  }
+  .address_container button{
+    border-radius: 12px;
+    
+  }
+  .address-box{
+    margin-top: 1em;
+    border: 1px solid green;
+    border-radius: 12px;
+    padding: 2em;
+  }
