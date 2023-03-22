@@ -404,22 +404,6 @@ input[type="checkbox"]:checked {
     padding: 2em;
 }
 
-.credit_container {
-    margin: 0 auto;
-    width: 40%;
-}
-
-.credit_container button {
-    border-radius: 12px;
-}
-
-.credit-box {
-    margin-top: 1em;
-    border: 1px solid green;
-    border-radius: 12px;
-    padding: 2em;
-}
-
 .container {
     width: 1200px;
     height: auto;
