@@ -19,4 +19,4 @@ int main(){
     {
         printf("%.2f\n",ans[j]);
     }
-}
+} 
