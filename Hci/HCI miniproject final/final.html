@@ -24,8 +24,10 @@
     </header>
     <div class="container">
         <div class="left_con">
-            <div class="member" style="text-align: center; display: flex; justify-content: center ; align-items: center;">
-                <h1 id="Total_member"></h1>
+            <div class="box" style="display: flex; justify-content: center;">
+                <div class="member" style="text-align: center; display: flex; justify-content: center ; align-items: center;">
+                    <h1 id="Total_member"></h1>
+                </div>
             </div>
                 <canvas id="donut"></canvas>
                 <canvas id="myChart3"></canvas>
@@ -34,6 +36,11 @@
                 <canvas id="myChart" width="700px" height="400px"></canvas>
                 <canvas id="myChart2"width="700px" height="400px" ></canvas>
         </div>
+    </div>
+    <div class="lorem">
+        <p style="font-size: 20px;">
+            จากDataที่มีจะสังเกตได้ว่ามีข้อมูลหลากหลายชนิดมากและมีจำนวนข้อมูลเยอะการจะนำข้อมูลทั้งหมดมาอยู่ในกราฟเดียวกันคงเเป็นเรื่องที่ทำได้ยาก ดังนั้นผมจริงแยกข้อมูลแต่ละชนิดแบ่งออกมาจัดหมู่เข้าด้วยกัน โดยในที่นี้จะแบ่งเป็น 4 กราฟ 1.doughnut chart ที่ทำหน้าที่บอกจำนวนข้อมูลในแต่ละสำนักพิมพ์ว่ามีเท่าไหร่ โดยจะแบ่งเป็น 3 หมวด 1. Dc Comics และเลือกใช้สีฟ้าเพราะสีโลโก้ของ Dc เป็นสีฟ้าทำให้ผู้ที่มาใช้งานกราฟนี้ก็จะคุ้นตากับสีของค่า Dc มากยิ่งขึ้น 2. Marvel Comics โดยจะเลือกใช้สีแดงเข้มเช่นเดียวกับสีของโลโก้ 3.จะเป็นการรวมสำนักพิมพ์อื่นๆไว้ด้วยกันโดยใช้สีเหลืองเพื่อนความไม่เด่นชัดไปด้านใดด้านหนึ่งแสดงถึงความเป็นกลาง ต่อมากราฟ pie แสดงสีตาของsuperheroแต่ละตัวโดยใช้สีเดียวกับกราฟ เช่น ตาสีน้ำตาลก็ใช้สีน้ำตาลในกราฟเพื่อให้เข้าใจได้โดยที่ไม่ต้องอ่าน legend ต่อมาเป็น bar chart แสดงถึงเพศของsuperhero โดยจะแบ่งสีเป็นสามสี 1 สีฟ้าใช้แทนเพศชาย เพราะ Ux ของคนเราก็จะชินกับการที่เห็นสีฟ้าเป็นเพศชาย 2 สีชมพูแทนเพศหญิง 3 สีขาวบ่งบอกถึงsuperheroที่ไปบ่งบอกเพศ ต่อมาเป็น bar chart แสดงถึง alignment โดยแบ่งเป็น 1 good ให้เป็นสีขาวบ่งบอกถึงความบริสุทธิ์ 2 bad ให้เป็นสีดำบ่งบอกถึงความดำมืดและชั่วร้าย 3 neutral ให้เป็นสีเทาแสดงถึงความเป็นกลางระหว่างสีขาวและสีดำ
+        </p>
     </div>
 
 </body>
