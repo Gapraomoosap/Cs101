@@ -9,6 +9,7 @@ public class lab1 {
         double Fahrenheit = myObj.nextDouble();
         double Celsius = (5.0/9.0)*(Fahrenheit-32);
         System.out.printf("Temperature in Celsius : %.2f" ,Celsius );
+        myObj.close();
     }
     
 }
