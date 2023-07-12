@@ -1,4 +1,3 @@
-package Cs101.year2.OOP.lab1;
 import java.lang.Math;
 import java.util.Scanner;
 public class lab3 {
