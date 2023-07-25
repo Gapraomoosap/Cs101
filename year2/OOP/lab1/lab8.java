@@ -18,6 +18,8 @@ public class lab8 {
                 System.out.print(array[i]+ " ");
             }
         }
+    sc.close();
     }
+    
     
 }

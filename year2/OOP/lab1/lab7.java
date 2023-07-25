@@ -10,5 +10,6 @@ public class lab7 {
             total = (int)(total + Math.pow(x,i));
         }
         System.out.println(total);
+        sc.close();
     }
 }

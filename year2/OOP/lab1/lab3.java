@@ -15,7 +15,7 @@ public class lab3 {
         double s = (side1 + side2 + side3 ) / 2;
         double area = Math.sqrt(s * (s - side1) * (s - side2 ) * (s - side3));
         System.out.printf("\nThe area of the triangle is %.2f",area);
-
+        myobs.close();
 
 
     }

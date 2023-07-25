@@ -20,7 +20,7 @@ public class lab9 {
             i++;
         }
         System.out.println(max+ " "+ count);
-        
+        sc.close();
     }
     
 }
