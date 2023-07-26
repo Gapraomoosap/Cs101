@@ -5,7 +5,7 @@ int main()
     double ans;
     int array[10];
     double prev_state, curent;
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i <= 10; i++)
     {
         array[i] = 43.0 * i - 180;
         if (i > 0)
