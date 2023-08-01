@@ -175,4 +175,28 @@ ___
 ___
 
 ### Encapsulation
-##### Get & Set
+##### Get & Set ทำหน้าที่รับและส่งค่าสำหรับ parameter ที่มีค่าเป็น private ในคลาสอื่นๆ
+#### Getter
+```java
+public class animal{
+    private name;
+
+    public getName(){
+        return this.name;
+    }
+}
+```
+return ค่าที่ต้องการออกมาจาก method เพื่อให้สามารถใช้งานนอก class ได้
+#### Setter
+```java 
+public class animal{
+    private name;
+
+    public setName(String name){
+        this.name=name;
+    }
+}
+```
+ส่งค่าเข้ามา เพื่อเปลี่ยนค่าที่ต้องการใน class จาก method 
+
+___
