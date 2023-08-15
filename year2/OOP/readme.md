@@ -181,7 +181,7 @@ ___
 public class animal{
     private name;
 
-    public getName(){
+    public String getName(){
         return this.name;
     }
 }
@@ -192,7 +192,7 @@ return ค่าที่ต้องการออกมาจาก method �
 public class animal{
     private name;
 
-    public setName(String name){
+    public void setName(String name){
         this.name=name;
     }
 }
