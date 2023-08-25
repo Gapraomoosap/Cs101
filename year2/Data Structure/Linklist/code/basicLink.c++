@@ -10,6 +10,7 @@ struct Node
 void printlist(Node **head_ref)
 {
     Node *temp_node = *head_ref;
+    cout<<endl<<"list : ";
     while (temp_node != NULL)
     {
         cout << temp_node->data << " ";
@@ -85,6 +86,16 @@ void delPos(Node **head_ref, int pos)
         current = NULL;
     }
 }
+void pop(Node **head_ref)
+{
+    Node *new_node = *head_ref;
+    Node *next = *head_ref;
+    cout << "pop : "<< new_node->data;
+    next = next->next;
+    free(new_node);
+    new_node = NULL;
+    *head_ref=next;
+}
 void reverse(Node **head_ref)
 {
     Node *current = *head_ref;
@@ -109,14 +120,17 @@ int main()
     push(&head, 2);
     push(&head, 9);
     push(&head, 3);
-    append(&head, 100);
-    insertAfter(head->next, 5);
-    cout << "before : ";
+    pop(&head);
+    
     printlist(&head);
-    delPos(&head, 1);
-    reverse(&head);
-    cout << "after : ";
-    printlist(&head);
+    // append(&head, 100);
+    // insertAfter(head->next, 5);
+    // cout << "before : ";
+    // printlist(&head);
+    // delPos(&head, 1);
+    // reverse(&head);
+    // cout << "after : ";
+    // printlist(&head);
 
 
 }
