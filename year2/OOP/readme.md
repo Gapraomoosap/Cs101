@@ -200,3 +200,25 @@ public class animal{
 ส่งค่าเข้ามา เพื่อเปลี่ยนค่าที่ต้องการใน class จาก method 
 
 ___
+
+### Array
+
+#### Array list
+##### วิธีประกาศ array list
+```java
+import java.util.ArrayList;
+
+public class main(){
+    public static void main(String[] args){
+        ArrayList<String> students = new ArrayList<string>();
+    }
+}
+```
+
+##### function ในการใช้งาน 
+1. add เพิ่มค่าเข้าไปในarray `students.add("Focus")` , `students.add("Smild")`
+2. get เลือกดูค่าจาก arrayจากตำแหน่งนั้นๆ `students.get(1)`
+3. set เลือกเปลี่ยนค่าในตำแหน่งต่างๆในarray `students.set(1,"PP")`
+4. remove เลือกลบค่าจากตำแหน่งนั้นๆออก `students.remove(0)`
+5. clear เลือกที่จะเคลียร์ array ทิ้ง = ลบค่าทุกอย่างทิ้งไปให้หมด `students.clear()`
+6. size ดูขนาดของarrayว่ามีข้อมูลกี่ตัว `students.size()` **ต้อง print มาดูนะจ๊ะ
