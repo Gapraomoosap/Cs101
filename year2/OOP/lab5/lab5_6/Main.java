@@ -1,3 +1,5 @@
+package year2.OOP.lab5.lab5_6;
+
 import java.util.Scanner;
 
 public class Main {
