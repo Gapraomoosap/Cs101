@@ -1,5 +1,6 @@
-#include <stdio.h>
 #include <math.h>
+#include <iostream>
+using namespace std;
 
 void func(double X[4], double result[4])
 {
@@ -19,34 +20,24 @@ int main()
 {
     double X[4] = {0.0, 0.0, 0.0, 0.0};
     double result[4];
-
     double Error = 0.01;
-    int i = 0;
-
     func(X, result);
 
-    while ((fabs(result[0] - X[0] / result[0]) * 100 >= Error) &&
-           (fabs(result[1] - X[1] / result[1]) * 100 >= Error) &&
-           (fabs(result[2] - X[2] / result[2]) * 100 >= Error))
-    {
-        printf("X[0] Error: %lf\n", (fabs(result[0] - X[0] / result[0]) ));
-        printf("X[1] Error: %lf\n", (fabs(result[1] - X[1] / result[1]) ));
-        printf("X[2] Error: %lf\n", (fabs(result[2] - X[2] / result[2]) ));
-        for (int j = 0; j < 4; j++)
-        {
-            X[j] = result[j];
-        }
-        func(X, result);
-        printf("Iteration %d:\n", i + 1);
-        printf("X[0]: %lf\n", result[0]);
-        printf("X[1]: %lf\n", result[1]);
-        printf("X[2]: %lf\n", result[2]);
-        printf("X[3]: %lf\n", result[3]);
+    while ((fabs((result[0] - X[0]) / result[0]) * 100 >= Error) &&
+           (fabs((result[1] - X[1]) / result[1]) * 100 >= Error) &&
+           (fabs((result[2] - X[2]) / result[2]) * 100 >= Error) &&
+           (fabs((result[3] - X[3]) / result[3]) * 100 >= Error))
+           {
 
-       
-
-        i++;
-    }
+            for (int j = 0; j < 4; j++)
+            {
+                X[j] = result[j];
+                cout << X[j] << endl;
+            }
+            cout << endl;
+            func(X, result);
+            
+           }
 
     return 0;
 }
