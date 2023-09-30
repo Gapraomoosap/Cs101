@@ -7,7 +7,6 @@ class MaxHeap
 public:
     int index;
     int arr[1000];
-    int max_heap;
 
     void Delete()
     {
@@ -15,33 +14,41 @@ public:
         index--;
         arr[1] = arr[index];
         D_swap(1);
+
         cout << deletedValue << endl;
     }
 
     void D_swap(int i)
     {
+        // cout << count << " R :"  ;
+        // print();
         int right = i * 2 + 1;
         int left = i * 2;
         int track = i;
+        // cout << "t = " << track << endl;
         if (arr[left] >= arr[right] && arr[track] < arr[left])
         {
+            
             swap(arr[left], arr[track]);
             track = track * 2;
         }
         else if (arr[right] > arr[left] && arr[track] < arr[right])
         {
+   
             swap(arr[right], arr[track]);
             track = track * 2 + 1;
         }
         else if (arr[left] > arr[track])
-        {
-            cout << "in func";
+        {   
+        
             swap(arr[left], arr[track]);
             return;
         }
-        if (track*2  < index - 1)
+        else{return;}
+        if (track*2  <= index - 1)
         {
-            cout <<"track  = " << track *2<<endl << " index -1 = " << index - 1 << endl;
+         
+            // cout <<"track  = " << track *2<<endl << " index -1 = " << index - 1 << endl;
             D_swap(track);
         }
     }
@@ -52,7 +59,7 @@ public:
         {
             cout << arr[i] << "  ";
         }
-        cout << endl;
+        cout << endl; 
     }
 
     void swap_value(int i, int value)
@@ -91,7 +98,6 @@ public:
             }
             else
             {
-                // cout << "swap_value" << endl;
                 swap_value(index, x);
                 index++;
             }
@@ -120,5 +126,5 @@ int main()
             test.Delete();
         }
     }
-    cout << "end";
+    
 }
