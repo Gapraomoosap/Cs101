@@ -14,7 +14,6 @@ public:
         index--;
         arr[1] = arr[index];
         D_swap(1);
-
         cout << deletedValue << endl;
     }
 
@@ -28,7 +27,6 @@ public:
         // cout << "t = " << track << endl;
         if (arr[left] >= arr[right] && arr[track] < arr[left])
         {
-            
             swap(arr[left], arr[track]);
             track = track * 2;
         }
@@ -57,7 +55,7 @@ public:
     {
         for (int i = 1; i < index; i++)
         {
-            cout << arr[i] << "  ";
+            cout << arr[i] << " ";
         }
         cout << endl; 
     }
