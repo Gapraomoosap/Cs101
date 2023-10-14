@@ -16,6 +16,7 @@ void func(double X[4], double result[4])
     result[3] = (Mb[3] - X[0] * matrix[3][0] - X[1] * matrix[3][1] - X[2] * matrix[3][2]) / matrix[3][3];
 }
 
+
 int main()
 {
     double X[4] = {0.0, 0.0, 0.0, 0.0};
