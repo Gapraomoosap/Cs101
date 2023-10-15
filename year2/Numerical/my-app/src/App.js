@@ -1,15 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import * as React from 'react';
 import Bisection from './componant/Bisection';
-
+import Home from './componant/Home';
 function App() {
   return (
-    <div className="App">
-      <Bisection />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
