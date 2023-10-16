@@ -45,12 +45,10 @@
 
 .menu {
   position: absolute;
-
   list-style-type: none;
-  margin: 5px 0;
+  margin: 10px 0;
   padding: 0;
-
-  border: 1px solid grey;
+  border: 1px solid #001C30;
   width: 150px;
 }
 
@@ -61,7 +59,7 @@
 }
 
 .menu > li:hover {
-  background-color: lightgray;
+  background-color: #DAFFFB;
 }
 
 .menu > li > button {
