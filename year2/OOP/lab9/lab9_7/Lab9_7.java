@@ -1,14 +1,10 @@
-
 package year2.OOP.lab9.lab9_7;
-import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.border.TitledBorder;
-/**
- *
- * @author acer
- */
+
+
 class Panel extends JFrame{
     JPanel p1 = new JPanel();
     JLabel headtext = new JLabel("ACCOUNT MONEY");

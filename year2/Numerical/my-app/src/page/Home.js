@@ -1,8 +1,8 @@
-import Navbar from "./navbar"
+import Navbar from "../componant/navbar"
 import 'react-dropdown/style.css';
 import * as React from 'react';
-import Select from "./Select";
-import Bisection from "../Root_of_Equation/Bisection_search";
+import Select from "../componant/Select";
+
 
 
 export default function Home() {
