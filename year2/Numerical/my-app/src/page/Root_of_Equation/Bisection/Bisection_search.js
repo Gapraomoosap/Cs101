@@ -3,7 +3,7 @@ import Sample from "./Bisection"
 
 export default function Bisection(){
     return(
-        <div id="Bisection search" className="bg-red-500">
+        <div id="Bisection search" >
             <Navbar/>
             <Sample />
         </div>
