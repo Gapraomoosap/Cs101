@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { useNavigate } from 'react-router-dom';
-import { Link } from "react-router-dom";
-import { Button } from 'react-bootstrap';
 
 const Select = () => {
     const [val, setVal] = useState('');
@@ -16,7 +14,6 @@ const Select = () => {
     const data5 = ["-", "Simple Regression", "Multiple Regression"];
     const data6 = ["-", "Trapezoidal Rule", "Composite Trapezoidal Rule", "Simpson Rule", "Composite Simpson Rule"];
     const handleSelect2Change = (selectedValue) => {
-        
         const formattedSelectedValue = selectedValue.replace(/ /g, '_');
         const paTh = "/" + formattedSelectedValue;
         navigate(paTh);

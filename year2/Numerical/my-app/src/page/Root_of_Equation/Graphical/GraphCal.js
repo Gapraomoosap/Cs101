@@ -3,8 +3,8 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page B', uv: 600, pv: 2500, amt: 2700 }];
 export default function Graphcal() {
     return (
-        <div className=" mt-10 flex flex-col justify-center">
-            <div className="flex flex-col justify-center max-w-sm">
+        <div className="flex flex-col justify-center items-center mt-10 ">
+            <div className=" max-w-sm">
                 <h1 className="text-4xl mb-10">Graphical methods</h1>
                 <div>
                     <form>
@@ -33,7 +33,7 @@ export default function Graphcal() {
                     </div>
                 </div>
             </div>
-            <div className="">
+            <div className="mt-10">
                 <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
                     <Line type="monotone" dataKey="uv" stroke="#8884d8" />
                     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
