@@ -18,6 +18,7 @@ const Select = () => {
         const paTh = "/" + formattedSelectedValue;
         navigate(paTh);
     };
+    
     let select2Options = [];
     if (val === "Root of Equation") {
         select2Options = data2;
