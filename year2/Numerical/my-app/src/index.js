@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Bisection from './page/Root_of_Equation/Bisection/Bisection_search';
 import GraphPage from './page/Root_of_Equation/Graphical/GraphPage';
+import FalsePage from './page/Root_of_Equation/False/FalsePosition';
+import OnePointPage from './page/Root_of_Equation/One_point/onepointPage';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/False-position_methods",
-    element: <Bisection />,
+    element: <FalsePage />,
   },
   {
     path: "/Graphical_methods",
@@ -33,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/One-point_Iteration_methods",
-    element: <Bisection />,
+    element: <OnePointPage />,
   },
   {
     path: "/Secant_methods",

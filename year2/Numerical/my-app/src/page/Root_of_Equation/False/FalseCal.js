@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Button, Container, Table } from "react-bootstrap";
 import { evaluate } from 'mathjs'
 
-const Sample = () => {
+const False = () => {
     const print = () => {
         console.log(data)
         setValueIter(data.map((x) => x.iteration));
@@ -38,26 +38,24 @@ const Sample = () => {
     }
 
     const error = (xold, xnew) => Math.abs((xnew - xold) / xnew) * 100;
-
     const Calbisection = (xl, xr) => {
-        var xm, fXm, fXr, ea, scope;
+        var xm, fXm, fXl, fXr, ea, scope;
         var iter = 0;
-        var MAX = 50;
+        const MAX = 50;
         const e = 0.00001;
         var obj = {};
         do {
-            xm = (xl + xr) / 2.0;
-            scope = {
-                x: xr,
-            }
-            fXr = evaluate(Equation, scope)
-
-            scope = {
-                x: xm,
-            }
-            fXm = evaluate(Equation, scope)
-
+            scope = { x: xr };
+            fXr = evaluate(Equation, scope);
+    
+            scope = { x: xl };
+            fXl = evaluate(Equation, scope);
+    
+            xm = (xl + xr) / 2;
+            scope = { x: xm };
+            fXm = evaluate(Equation, scope);
             iter++;
+    
             if (fXm * fXr > 0) {
                 ea = error(xr, xm);
                 obj = {
@@ -65,24 +63,24 @@ const Sample = () => {
                     Xl: xl,
                     Xm: xm,
                     Xr: xr
-                }
-                data.push(obj)
+                };
+                data.push(obj);
                 xr = xm;
-            }
-            else if (fXm * fXr < 0) {
+            } else if (fXm * fXr < 0) {
                 ea = error(xl, xm);
                 obj = {
                     iteration: iter,
                     Xl: xl,
                     Xm: xm,
                     Xr: xr
-                }
-                data.push(obj)
+                };
+                data.push(obj);
                 xl = xm;
             }
-        } while (ea > e && iter < MAX)
-        setX(xm)
-    }
+        } while (ea > e && iter < MAX);
+        setX(xm);
+    };
+    
 
     const data = [];
     const [valueIter, setValueIter] = useState([]);
@@ -126,7 +124,7 @@ const Sample = () => {
     return (
         <div className="flex flex-col justify-center items-center mt-10 ">
             <div className=" max-w-sm">
-                <h1 className="text-4xl mb-10">Bisection methods</h1>
+                <h1 className="text-4xl mb-10">False-position methods</h1>
                 <div>
                     <form>
                         <div className="flex flex-col mb-4">
@@ -155,4 +153,4 @@ const Sample = () => {
     )
 }
 
-export default Sample
+export default False
