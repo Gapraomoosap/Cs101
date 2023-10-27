@@ -7,6 +7,8 @@ import Bisection from './page/Root_of_Equation/Bisection/Bisection_search';
 import GraphPage from './page/Root_of_Equation/Graphical/GraphPage';
 import FalsePage from './page/Root_of_Equation/False/FalsePosition';
 import OnePointPage from './page/Root_of_Equation/One_point/onepointPage';
+import NewtonPage from './page/Root_of_Equation/Newton_Raphson/newtonPage';
+import SecantPage from './page/Root_of_Equation/Secant/secantPage';
 
 import {
   createBrowserRouter,
@@ -32,7 +34,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Newton-Raphson_methods",
-    element: <Bisection />,
+    element: <NewtonPage />,
   },
   {
     path: "/One-point_Iteration_methods",
@@ -40,7 +42,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Secant_methods",
-    element: <Bisection />,
+    element: <SecantPage />,
   },
   {
     path: "/Conjugate_Gradient_Methods",
