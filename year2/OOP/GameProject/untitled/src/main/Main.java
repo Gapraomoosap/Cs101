@@ -1,3 +1,5 @@
+package main;
+
 import javax.swing.*;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -13,8 +15,6 @@ public class Main {
         GamePanel gamePanel = new GamePanel();
         window.add(gamePanel);
         window.pack();
-
-
 
         window.setLocationRelativeTo(null);
         window.setVisible(true);
