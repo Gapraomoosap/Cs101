@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useState } from "react"
 import {  evaluate } from 'mathjs'
+import ChartComponent from './GraphChart';
 
 export default function Graphcal() {
     const calGraph = (xl, xr, error) => {
@@ -39,14 +40,15 @@ export default function Graphcal() {
             }
         }
         while ((Math.abs(func(index)) > error)) {
-            index = index + 0.000001
+            index = index + (error * 0.1)
         }
         obj = {
             iteration: inter,
-            Xi: index,
-            Fxi: func(index)
+            Xi: index.toFixed(6),
+            Fxi: func(index).toFixed(6)
         }
         data.push(obj)
+        console.log(data)
     };
 
     const print = () => {
@@ -70,6 +72,7 @@ export default function Graphcal() {
                         ))}
                     </tbody>
                 </table>
+                {data.length > 0 && <ChartComponent data={data} />}
             </div>
         )
     }
@@ -130,6 +133,7 @@ export default function Graphcal() {
                     </div>
                 </div>
                 {html}
+                
             </div>
         </div>
 
