@@ -40,7 +40,7 @@ export default function Graphcal() {
             }
         }
         while ((Math.abs(func(index)) > error)) {
-            index = index + (error * 0.1)
+            index = index + 0.0000001
         }
         obj = {
             iteration: inter,
