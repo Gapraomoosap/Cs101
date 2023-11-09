@@ -162,9 +162,6 @@ public class Player extends Entity{
         } else if(color == "white"){
             image = white;
         }
-        if(color != "white"){
-
-        }
         g2.drawImage(image,screenX,screenY,gp.titalSize,gp.titalSize,null);
     }
 }

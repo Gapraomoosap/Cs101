@@ -31,9 +31,9 @@ public class UI {
             String txt;
             int txtlength;
             int x,y;
-            txt = "You won!!!";
+            txt = "You win!!!";
             txtlength = (int)g2.getFontMetrics().getStringBounds(txt,g2).getWidth();
-            x = gp.screenWidth/2 - txtlength/2;
+            x = gp.screenWidth/2 - txtlength;
             y = gp.screenHeight - (gp.titalSize*4);
             g2.setFont(arial_100);
             g2.setColor(Color.red);
@@ -45,9 +45,9 @@ public class UI {
         g2.setFont(arial_40);
         g2.setColor(Color.white);
         g2.drawImage(keyImage,gp.titalSize/2,gp.titalSize/2, gp.titalSize, gp.titalSize ,null);
-        g2.drawString("x "+gp.player.hascoin+"/6",74,65);
-        g2.drawImage(ballImage,gp.titalSize/2,90,gp.titalSize,gp.titalSize,null);
-        g2.drawString("x "+gp.player.hascolor+"/6",74,120);
-        g2.drawString("time: " + formattedTime, gp.titalSize * 11, 65);
+        g2.drawString("x "+gp.player.hascoin+"/6",gp.titalSize/2+74,gp.titalSize/2+40);
+        g2.drawImage(ballImage,gp.titalSize/2,gp.titalSize+70,gp.titalSize,gp.titalSize,null);
+        g2.drawString("x "+gp.player.hascolor+"/6",gp.titalSize/2+74,gp.titalSize+100);
+        g2.drawString("time: " + formattedTime, gp.titalSize * 11, gp.titalSize/2+40);
     }
 }
