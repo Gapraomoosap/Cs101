@@ -1,29 +1,30 @@
 #include <iostream>
 using namespace std;
 
-void func(int L[], int K[])
+    int main()
 {
-    for (int i = 0; i < 8; i++)
+    int n = 0, x = 0, a = 0;
+    cin >> n;
+    cin >> x;
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        L[i] += K[7 - i];
+        cin >> a;
+        arr[i] = a;
     }
-}
-int main()
-{
-    int L[] = {0, 0, 0, 0, 0, 0, 0, 0};
-    int K[] = {5, 10, 20, 99, 78, 55, 4, 65};
-    int sum, count = 1;
-    do
+
+    for (int i = 0; i < n; i++)
     {
-        sum = 0;
-        cout << count << endl;
-        func(L, K);
-        for (int i = 0; i < 8; i++)
+        for (int j = i + 1; j < n; j++)
         {
-            cout << "L[" << i << "] = " << L[i] << endl;
-            sum += L[i];
-            // cout <<"SUM : "<<sum<<endl;
+            if (i == j)
+                continue;
+            if (arr[i] + arr[j] == x)
+            {
+                cout << i << " " << j;
+                return 0;
+            }
         }
-        count++;
-    } while (sum < 1000);
+    }
+    cout << "-1";
 }
