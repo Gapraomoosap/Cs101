@@ -1,71 +1,57 @@
-#include <iostream>
-#include <vector>
-#include <queue>
+#include <bits/stdc++.h>
 using namespace std;
-
-void BFS(vector<vector<int>>& graph, int startVertex, vector<bool>& visited, int parent[]) {
-    queue<int> queue;
-    queue.push(startVertex);
-    visited[startVertex] = true;
-    parent[startVertex] = -1; 
-
-    while (!queue.empty()) {
-        int currentVertex = queue.front();
-        queue.pop();
-
-        for (int i = 0; i < graph[currentVertex].size(); ++i) {
-            int neighbor = graph[currentVertex][i];
-            if (!visited[neighbor]) {
-                queue.push(neighbor);
-                visited[neighbor] = true;
-                parent[neighbor] = currentVertex; 
+void BFS(vector<vector<int>> g, int start, int dest, vector<bool> visited)
+{
+    vector<int> parent_child(g.size(), -1);
+    queue<int> q;
+    q.push(start);
+    visited[start] = true;
+    while (!q.empty())
+    {
+        int cur = q.front();
+        q.pop();
+        for (int i = 0; i < g.size(); i++)
+        {
+            if (g[cur][i] && !visited[i])
+            {
+                q.push(i);
+                parent_child[i] = cur;
+                visited[i] = true;
             }
         }
     }
-}
-
-int shortest(int parent[], int startVertex, int endVertex) {
-    int pathLength = 0;
-    for (int v = endVertex; v != -1; v = parent[v]) {
-        pathLength++;
-        if (v == startVertex) {
-            break;
-        }
+    int count = -1;
+    int d = dest;
+    while (d != -1)
+    {
+        d = parent_child[d];
+        count++;
     }
-    return pathLength;
+    cout << count;
 }
-
-int main() {
+int main()
+{
+    vector<vector<int>> g;
     int n;
     cin >> n;
-    int x;
-    int parent[n];
-    vector<vector<int>> graph(n);
-    vector<bool> visited(n, false);
-
-    for (int i = 0; i < n; i++) {
-        while (true) {
-            cin >> x;
-            if (x == -1) {
+    for (int i = 0; i < n; i++)
+    {
+        g.push_back(vector<int>(n, 0));
+    }
+    for (int i = 0; i < n; i++)
+    {
+        int t;
+        while (true)
+        {
+            cin >> t;
+            if (t == -1)
                 break;
-            }
-            graph[i].push_back(x);
+            g[i][t] = 1;
         }
     }
-
-    int startVertex, endVertex;
-    cin >> startVertex >> endVertex;
-
-    BFS(graph, startVertex, visited, parent);
-
-    cout << "Parent Array:\n";
-    for (int i = 0; i < n; i++) {
-        cout << "Parent of node " << i << " is " << parent[i] << endl;
-    }
-
-    int length = shortest(parent, startVertex, endVertex);
-    cout << "Shortest Path Length from " << startVertex << " to " << endVertex << " is " << length << endl;
-
+    int s, d;
+    cin >> s >> d;
+    vector<bool> visited(g.size(), false);
+    BFS(g, s, d, visited);
     return 0;
 }
-
