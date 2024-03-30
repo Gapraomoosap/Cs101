@@ -41,8 +41,22 @@ void Subset1(int x[], int l, int r)
 
 int main(){
     int n =4;
-    int x[n+1];
+    int x[n+1] = {0}; // Initialize x array with 0
     Subset1(x,0,n);
+
+    // Print the selected items
+    cout << "Selected items: ";
+    for (int i = 1; i <= n; i++)
+    {
+        if (ans[i] == 1)
+        {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    // Print the maximum value
+    cout << "Maximum value: " << max_v << endl;
 
     return 0;
 }
