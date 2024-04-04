@@ -1,31 +1,27 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-int powA(int n,int k,int *count){
-	if(k==0){
-		(*count)++;
-		return 1;
-		
+long long pow(int a, int n){
+	int temp;
+	if(n == 1){
+		return a;
 	}
-	if(k==1){
-		(*count)++;
-		return n;
+	temp = pow(a, n/2);
+	if(n%2 == 0){
+		return temp * temp;
 	}
-	if(k%2==0){
-		(*count)++;
-		return powA(n*n,k/2,count);
-		
-	}else{
-		(*count)++;
-		return powA(n*n,k/2,count)*n;
+	else{
+		return a * temp * temp;
 	}
 }
 
 int main(){
-	int i,n,k,count=0;
-	cin>>n>>k;
-	cout<<powA(n,k,&count)<<" ";
-	cout<<count;
+	int a, n;
+	cin>>a>>n;
+	
+	if(n % 2 != 0 && a % 2 != 0) cout<<pow(a, n)<<" "<<floor(n/2.0); // test case 2 (n is odd, a is odd)
+    else if (n % 2 != 0 && a % 2 == 0) cout<<pow(a, n)<<" "<<ceil(n/2.0); // test case 3 (n is odd, a is even)
+    else cout<<pow(a, n)<<" "<<floor(n/2.0); // test case 1 (n is even, a is even)
+	
 	return 0;
 }
